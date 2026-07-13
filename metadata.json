@@ -1,0 +1,6 @@
+{
+  "name": "Kashi Divine Stay",
+  "description": "Premium single-page website for a heritage budget hotel in Varanasi with AI Concierge.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

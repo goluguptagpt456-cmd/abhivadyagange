@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
 
 const galleryImages = [
-  "/images/1200.jpg",
-  "/images/1800.jpg",
-  "/images/2000.png",
-  "/images/2500.jpg",
-  "/images/kashi.png",
+  "https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&q=80&w=800", // Room 1
+  "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80&w=800", // Room 2
+  "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800", // Bed Detail
+  "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=800", // Reception/Lobby
+  "https://images.unsplash.com/photo-1707343843982-f8270f130d22?auto=format&fit=crop&q=80&w=800", // Varanasi Ghats
   "https://images.unsplash.com/photo-1627894483161-1c390500d075?auto=format&fit=crop&q=80&w=800", // Washroom
 ];
 

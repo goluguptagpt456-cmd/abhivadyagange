@@ -6,7 +6,7 @@ const rooms = [
     name: 'Standard Room',
     price: '1,200',
     capacity: '2 Persons',
-    imagePath: '/images/1200.jpg',
+    imagePath: '/1200.jpg',
     features: ['AC', 'Free Wi-Fi', 'Breakfast Optional', 'Clean Linen'],
     delayClass: 'delay-100'
   },
@@ -15,7 +15,7 @@ const rooms = [
     name: 'Deluxe Room',
     price: '2,000',
     capacity: '4-5 Persons',
-    imagePath: '/images/2000.png',
+    imagePath: '/deluxe.png',
     features: ['AC', 'Free Wi-Fi', 'Family-friendly', 'Breakfast Optional'],
     delayClass: 'delay-200'
   },
@@ -24,7 +24,7 @@ const rooms = [
     name: 'Group/Family Suite',
     price: '2,500',
     capacity: '6-8 Persons',
-    imagePath: '/images/2500.jpg',
+    imagePath: '/2500.jpg',
     features: ['AC', 'Free Wi-Fi', 'Attached Washroom', 'Clean Linen'],
     delayClass: 'delay-300'
   },
@@ -33,7 +33,7 @@ const rooms = [
     name: 'Premium Room',
     price: '1,800',
     capacity: '2-3 Persons',
-    imagePath: '/images/1800.jpg',
+    imagePath: '/1800.jpg',
     features: ['AC', 'Free Wi-Fi', 'Modern Furnishing', 'Premium Amenities'],
     delayClass: 'delay-400'
   }

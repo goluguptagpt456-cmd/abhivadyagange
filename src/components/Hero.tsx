@@ -2,7 +2,7 @@ import { PhoneCall, CalendarCheck } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Hero() {
-  const [heroImage, setHeroImage] = useState<string>("/kashi.png");
+  const [heroImage, setHeroImage] = useState<string>("/images/kashi.png");
 
   return (
     <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-charcoal-900 pt-20">

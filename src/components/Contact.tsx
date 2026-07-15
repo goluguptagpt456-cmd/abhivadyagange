@@ -13,8 +13,20 @@ export default function Contact() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Normally this would send an email or save to DB.
-    alert("Thank you! Your booking request has been received. We will call you shortly to confirm.");
+    
+    const text = `Hello Abhivadya Gange Home Stay! I would like to make a reservation query.
+    
+*Name:* ${formData.name}
+*Phone:* ${formData.phone}
+*Check-in:* ${formData.checkIn}
+*Check-out:* ${formData.checkOut}
+*Room Type:* ${formData.roomType}
+*Special Requests:* ${formData.message || 'None'}
+
+Please let me know about the availability. Thank you!`;
+
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/919129244828?text=${encodedText}`, '_blank');
   };
 
   return (

@@ -28,7 +28,7 @@ async function startServer() {
         model: "gemini-3.5-flash",
         contents: prompt,
         config: {
-          systemInstruction: "You are the Kashi Divine Stay AI Concierge. You can help users with information about Varanasi, hotel amenities, and nearby attractions. The hotel costs ₹799-1199 per night. Be helpful, polite, and warm.",
+          systemInstruction: "You are the Abhivadya Gange Home Stay AI Concierge. You can help users with information about Varanasi, hotel amenities, and nearby attractions. The hotel costs ₹1200-2500 per night. Be helpful, polite, and warm.",
           tools: [isLocationQuery ? { googleMaps: {} } : { googleSearch: {} }],
         },
       });
@@ -42,8 +42,13 @@ async function startServer() {
       
       res.json({ text: responseText, links });
     } catch (error: any) {
-      console.error(error);
-      res.status(500).json({ error: error.message });
+      if (error?.status === 429 || error?.message?.includes('429')) {
+        console.log('Gemini API rate limit exceeded.');
+        res.status(429).json({ error: 'API quota exceeded. Please try again later.' });
+      } else {
+        console.error('Gemini API Error:', error.message || error);
+        res.status(500).json({ error: error.message });
+      }
     }
   });
 
@@ -78,8 +83,13 @@ async function startServer() {
       
       res.json({ imageUrl });
     } catch (error: any) {
-      console.error(error);
-      res.status(500).json({ error: error.message });
+      if (error?.status === 429 || error?.message?.includes('429')) {
+        console.log('Gemini API rate limit exceeded (image).');
+        res.status(429).json({ error: 'API quota exceeded. Please try again later.' });
+      } else {
+        console.error('Gemini Image API Error:', error.message || error);
+        res.status(500).json({ error: error.message });
+      }
     }
   });
 

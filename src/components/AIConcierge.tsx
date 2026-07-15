@@ -44,8 +44,10 @@ export default function AIConcierge() {
       if (res.ok) {
         const data = await res.json();
         setMessages(prev => [...prev, { role: 'assistant', text: data.text, links: data.links }]);
+      } else if (res.status === 429) {
+        setMessages(prev => [...prev, { role: 'assistant', text: "I'm receiving too many requests right now. Please call us at +91 91292 44828 for immediate assistance!" }]);
       } else {
-        setMessages(prev => [...prev, { role: 'assistant', text: "I'm having trouble connecting to the network right now. Please try calling us instead!" }]);
+        setMessages(prev => [...prev, { role: 'assistant', text: "I'm having trouble connecting right now. Please try calling us instead!" }]);
       }
     } catch (error) {
       setMessages(prev => [...prev, { role: 'assistant', text: "An error occurred. Please contact reception." }]);

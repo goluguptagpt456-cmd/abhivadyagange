@@ -15,7 +15,7 @@ const rooms = [
     name: 'Deluxe Room',
     price: '2,000',
     capacity: '4-5 Persons',
-    imagePath: '/2000.jpg',
+    imagePath: '/2000.png',
     features: ['AC', 'Free Wi-Fi', 'Family-friendly', 'Breakfast Optional'],
     delayClass: 'delay-200'
   },
